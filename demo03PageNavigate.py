@@ -15,12 +15,13 @@ link = driver.find_element(By.LINK_TEXT, "Game Development With Python")
 link.click()
 
 try:
-    element =  WebDriverWait(driver, 15).until(
-            EC.presence_of_element_located((By.LINK_TEXT, "Game Development With Python"))
-        )
+    element = driver.find_element(By.ID, "sow-button-1931-0003")
     element.click()
+    driver.back()
+    driver.back()
+    driver.back()
+    driver.back()
     
-    time.sleep(5)
 except:
     driver.quit()
     
